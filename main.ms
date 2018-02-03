@@ -1,6 +1,7 @@
 #########################################
 # Copyright 2016 ITSTAKE GPL v2.0
 # Script by itstake (bexco2010@gmail.com)
+# Version 1.3 (2018/02/04)
 #########################################
 
 bind('virtualchest_closed', null, null, @event,
