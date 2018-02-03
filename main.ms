@@ -16,6 +16,7 @@ bind(inventory_click, null, null, @e,
     if(import('MenuOpen'.player())) { # Itemmenu is Open
         cancel() # Cancel Click
         @number = @e['rawslot']
+		if(!(array_index_exists(@array['menu'], @number) && @number >= 0), die())
         	if(array_index_exists(@array['menu'][@number], to_lower(@e[clicktype]))) {
         		execute(@array['menu'][@number][to_lower(@e[clicktype])])
         	} else {

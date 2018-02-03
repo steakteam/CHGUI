@@ -26,6 +26,7 @@ if(import('MenuOpen'.player()) != true) {
     
     create_virtualchest(@chest)
     popen_virtualchest(@id)
+	}
 )
 proc(_itemmenu_update, @array,
     export('MenuOpen'.player(), true)
@@ -49,10 +50,7 @@ proc(_itemmenu_update, @array,
     foreach(@key:@value in @items) {
         array_set(@chest, @key, @value['item'])
     }
-	msg(@chest)
-    create_virtualchest(@chest)
-    popen_virtualchest(@id)
-}
+    update_virtualchest(@chest)
 )
 
 
